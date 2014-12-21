@@ -14,7 +14,6 @@
 		BE6036EE1A478BB600E71619 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6036EC1A478BB600E71619 /* LaunchScreen.xib */; };
 		BE6036FA1A478BB700E71619 /* AnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6036F91A478BB700E71619 /* AnimationsTests.swift */; };
 		BE6037051A478D2B00E71619 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE6037031A478D2B00E71619 /* LICENSE */; };
-		BE6037061A478D2B00E71619 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BE6037041A478D2B00E71619 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,7 +218,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE6037061A478D2B00E71619 /* README.md in Sources */,
 				BE6036E61A478BB600E71619 /* ViewController.swift in Sources */,
 				BE6036E41A478BB600E71619 /* AppDelegate.swift in Sources */,
 			);

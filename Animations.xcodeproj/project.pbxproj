@@ -13,6 +13,8 @@
 		BE6036EB1A478BB600E71619 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6036EA1A478BB600E71619 /* Images.xcassets */; };
 		BE6036EE1A478BB600E71619 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6036EC1A478BB600E71619 /* LaunchScreen.xib */; };
 		BE6036FA1A478BB700E71619 /* AnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6036F91A478BB700E71619 /* AnimationsTests.swift */; };
+		BE6037051A478D2B00E71619 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE6037031A478D2B00E71619 /* LICENSE */; };
+		BE6037061A478D2B00E71619 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BE6037041A478D2B00E71619 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		BE6036F31A478BB700E71619 /* AnimationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6036F81A478BB700E71619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE6036F91A478BB700E71619 /* AnimationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTests.swift; sourceTree = "<group>"; };
+		BE6037031A478D2B00E71619 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BE6037041A478D2B00E71619 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 		BE6036D51A478BB600E71619 = {
 			isa = PBXGroup;
 			children = (
+				BE6037031A478D2B00E71619 /* LICENSE */,
+				BE6037041A478D2B00E71619 /* README.md */,
 				BE6036E01A478BB600E71619 /* Animations */,
 				BE6036F61A478BB700E71619 /* AnimationsTests */,
 				BE6036DF1A478BB600E71619 /* Products */,
@@ -194,6 +200,7 @@
 			files = (
 				BE6036E91A478BB600E71619 /* Main.storyboard in Resources */,
 				BE6036EE1A478BB600E71619 /* LaunchScreen.xib in Resources */,
+				BE6037051A478D2B00E71619 /* LICENSE in Resources */,
 				BE6036EB1A478BB600E71619 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6037061A478D2B00E71619 /* README.md in Sources */,
 				BE6036E61A478BB600E71619 /* ViewController.swift in Sources */,
 				BE6036E41A478BB600E71619 /* AppDelegate.swift in Sources */,
 			);

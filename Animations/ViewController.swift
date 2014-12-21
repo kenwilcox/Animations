@@ -12,7 +12,12 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    let coloredSquare = UIView()
+    coloredSquare.backgroundColor = UIColor.blueColor()
+    coloredSquare.frame = CGRect(x: 0, y: 120, width: 50, height: 50)
+    
+    self.view.addSubview(coloredSquare)
   }
 
   override func didReceiveMemoryWarning() {

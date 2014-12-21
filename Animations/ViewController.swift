@@ -18,6 +18,11 @@ class ViewController: UIViewController {
     coloredSquare.frame = CGRect(x: 0, y: 120, width: 50, height: 50)
     
     self.view.addSubview(coloredSquare)
+    
+    UIView.animateWithDuration(1.0, animations: {
+      coloredSquare.backgroundColor = UIColor.redColor()
+      coloredSquare.frame = CGRect(x: self.view.frame.width - 50, y:120, width: 50, height: 50)
+    })
   }
 
   override func didReceiveMemoryWarning() {

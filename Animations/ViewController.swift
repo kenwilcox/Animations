@@ -21,7 +21,13 @@ class ViewController: UIViewController {
     
     UIView.animateWithDuration(1.0, animations: {
       coloredSquare.backgroundColor = UIColor.redColor()
-      coloredSquare.frame = CGRect(x: self.view.frame.width - 50, y:120, width: 50, height: 50)
+      let newFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
+      coloredSquare.frame = CGRect(x: self.view.frame.width - newFrame.width, y:120, width: newFrame.width, height: newFrame.height)
+      }, completion: { finished in
+        UIView.animateWithDuration(1.0, animations: {
+          coloredSquare.backgroundColor = UIColor.blueColor()
+          coloredSquare.frame = CGRect(x: 0, y: 120, width: 50, height: 50)
+        })
     })
   }
 

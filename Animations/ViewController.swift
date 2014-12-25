@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     let coloredSquare = UIView()
     let size : CGFloat = CGFloat( Int(rand()) %  40 + 20)
-    let yPosition : CGFloat = CGFloat( Int(rand()) %  200 + 20)
+    let yPosition : CGFloat = CGFloat( Int(rand()) %  Int(self.view.frame.height * 0.5) + 20)
     
     coloredSquare.backgroundColor = UIColor.blueColor()
     coloredSquare.frame = CGRect(x: 0, y: yPosition, width: size, height: size)

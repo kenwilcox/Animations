@@ -11,11 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
   override func viewDidLoad() {
+    super.viewDidLoad()
   }
 
   @IBAction func animateButtonPressed(sender: UIButton) {
-    super.viewDidLoad()
-    
     let coloredSquare = UIView()
     let size : CGFloat = CGFloat( Int(rand()) %  40 + 20)
     let yPosition : CGFloat = CGFloat( Int(rand()) %  Int(self.view.frame.height * 0.5) + 20)

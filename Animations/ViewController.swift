@@ -15,6 +15,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.countLabel.text = "\(Int(self.numberSlider.value))"
   }
 
   @IBAction func numberSliderChanged(sender: AnyObject) {

@@ -26,14 +26,23 @@
                                     <action selector="animateButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="E5r-sI-BrM"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ldd-1k-YIi">
+                                <rect key="frame" x="34" y="500" width="532" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="BsR-XE-nKT" firstAttribute="leading" secondItem="Ldd-1k-YIi" secondAttribute="leading" id="7LO-cb-N2o"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="BsR-XE-nKT" secondAttribute="bottom" constant="20" id="IGr-Ga-aQh"/>
+                            <constraint firstItem="BsR-XE-nKT" firstAttribute="width" secondItem="Ldd-1k-YIi" secondAttribute="width" id="NPD-5h-0Di"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BsR-XE-nKT" secondAttribute="trailing" constant="20" id="YLM-gx-exg"/>
+                            <constraint firstItem="BsR-XE-nKT" firstAttribute="top" secondItem="Ldd-1k-YIi" secondAttribute="bottom" constant="20" id="deH-Rk-GmF"/>
                             <constraint firstItem="BsR-XE-nKT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="kXM-bB-677"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberSlider" destination="Ldd-1k-YIi" id="9DC-GK-cdC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

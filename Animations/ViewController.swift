@@ -10,12 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var numberSlider: UISlider!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
 
   @IBAction func animateButtonPressed(sender: UIButton) {
-    for loopNumber in 1...10 {
+    let number = Int(self.numberSlider.value)
+    for loopNumber in 1...number {
       let coloredSquare = UIView()
       let size : CGFloat = CGFloat( Int(rand()) %  40 + 20)
       let yPosition : CGFloat = CGFloat( Int(rand()) %  Int(self.view.frame.height * 0.5) + 20)

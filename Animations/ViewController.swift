@@ -24,6 +24,7 @@ class ViewController: UIViewController {
       let yPosition : CGFloat = CGFloat( Int(rand()) %  Int(self.view.frame.height * 0.5) + 20)
       
       coloredSquare.backgroundColor = UIColor.blueColor()
+      coloredSquare.layer.zPosition = -99;
       coloredSquare.frame = CGRect(x: 0-size, y: yPosition, width: size, height: size)
       
       self.view.addSubview(coloredSquare)

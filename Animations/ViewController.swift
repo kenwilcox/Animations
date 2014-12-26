@@ -11,11 +11,16 @@ import UIKit
 class ViewController: UIViewController {
 
   @IBOutlet weak var numberSlider: UISlider!
+  @IBOutlet weak var countLabel: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
   }
 
+  @IBAction func numberSliderChanged(sender: AnyObject) {
+    self.countLabel.text = "\(Int(self.numberSlider.value))"
+  }
+  
   @IBAction func animateButtonPressed(sender: UIButton) {
     let number = Int(self.numberSlider.value)
     for loopNumber in 1...number {

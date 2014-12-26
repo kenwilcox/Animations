@@ -43,7 +43,7 @@ class ViewController: UIViewController {
                 }, completion: { finished in
                   // Go back to "home"
                   coloredSquare.backgroundColor = UIColor.blueColor()
-                  coloredSquare.frame = CGRect(x: 0, y: yPosition, width: size, height: size)
+                  coloredSquare.frame = CGRect(x: 0, y: yPosition - (size * 2) - yPosition, width: size, height: size)
                   coloredSquare.removeFromSuperview()
               })
               

@@ -47,19 +47,26 @@ class ViewController: UIViewController {
             coloredSquare.frame = CGRect(x: 0, y: yPosition, width: size, height: size)
             }, completion: {finished in
               
-              UIView.animateWithDuration(1.0, delay: delay * 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .CurveEaseInOut | .Autoreverse, animations: {
+              UIView.animateWithDuration(2.0, delay: delay * 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .CurveEaseInOut | .Autoreverse, animations: {
                 coloredSquare.backgroundColor = UIColor.greenColor()
                 coloredSquare.frame = CGRect(x: 0, y: self.view.frame.height - (size * 2), width: size * 2, height: size * 2)
                 }, completion: { finished in
-                  // Go back to "home"
-                  coloredSquare.backgroundColor = UIColor.blueColor()
-                  coloredSquare.frame = CGRect(x: 0, y: yPosition - (size * 2) - yPosition, width: size, height: size)
-                  coloredSquare.removeFromSuperview()
+
+                  UIView.animateWithDuration(0.5, animations: {
+                    // Go back to "home"
+                    coloredSquare.backgroundColor = UIColor.blueColor()
+                    coloredSquare.frame = CGRect(x: 0, y: -size, width: size, height: size)
+                    }, completion: {finished in
+                      coloredSquare.removeFromSuperview()
+                  })
+                  
               })
               
           })
       })
     }
+    
+
   }
   
   override func didReceiveMemoryWarning() {

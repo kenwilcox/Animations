@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             coloredSquare.frame = CGRect(x: 0, y: yPosition, width: size, height: size)
             }, completion: {finished in
               
-              UIView.animateWithDuration(2.0, delay: delay * 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .CurveEaseInOut | .Autoreverse, animations: {
+              UIView.animateWithDuration(2.0, delay: delay * 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .CurveEaseInOut, animations: {
                 coloredSquare.backgroundColor = UIColor.greenColor()
                 coloredSquare.frame = CGRect(x: 0, y: self.view.frame.height - (size * 2), width: size * 2, height: size * 2)
                 }, completion: { finished in

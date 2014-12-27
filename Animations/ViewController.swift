@@ -37,12 +37,12 @@ class ViewController: UIViewController {
       // randomize the delay
       let delay = NSTimeInterval(((Float(rand()) % 900.0) + 100.0) / 1000.0)
       
-      UIView.animateWithDuration(1.0, delay: delay, options: .CurveEaseOut, animations: {
+      UIView.animateWithDuration(2.0, delay: delay, options: .CurveEaseOut, animations: {
         coloredSquare.backgroundColor = UIColor.redColor()
         let newFrame = CGRect(x: 0, y: 0, width: size * 2, height: size * 2)
         coloredSquare.frame = CGRect(x: self.view.frame.width - newFrame.width, y:yPosition, width: newFrame.width, height: newFrame.height)
         }, completion: { finished in
-          UIView.animateWithDuration(1.0, delay: delay, options: .CurveEaseOut, animations: {
+          UIView.animateWithDuration(2.0, delay: delay, options: .CurveEaseOut, animations: {
             coloredSquare.backgroundColor = UIColor.blueColor()
             coloredSquare.frame = CGRect(x: 0, y: yPosition, width: size, height: size)
             }, completion: {finished in

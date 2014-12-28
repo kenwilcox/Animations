@@ -56,7 +56,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IbP-Pe-LGH">
-                        <barButtonItem key="rightBarButtonItem" title="Bouncy" id="VrN-jp-puC">
+                        <barButtonItem key="rightBarButtonItem" title="Fling" id="VrN-jp-puC">
                             <connections>
                                 <segue destination="YRV-Li-LGF" kind="show" id="3Lp-j0-VgH"/>
                             </connections>

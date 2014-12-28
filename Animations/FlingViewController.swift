@@ -47,6 +47,13 @@ class FlingViewController: UIViewController {
   }
   
   func panning(pan: UIPanGestureRecognizer) {
+    var location = pan.locationInView(self.view)
+    var touchLocation = pan.locationInView(self.greenBox)
     
+    if pan.state == UIGestureRecognizerState.Began {
+      self.greenBox!.center = location
+    } else if pan.state == UIGestureRecognizerState.Changed {
+      self.greenBox!.center = location
+    }
   }
 }

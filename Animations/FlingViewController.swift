@@ -51,9 +51,13 @@ class FlingViewController: UIViewController {
     var touchLocation = pan.locationInView(self.greenBox)
     
     if pan.state == UIGestureRecognizerState.Began {
+      self.animator!.removeAllBehaviors()
       self.greenBox!.center = location
     } else if pan.state == UIGestureRecognizerState.Changed {
       self.greenBox!.center = location
+    } else if pan.state == UIGestureRecognizerState.Ended {
+      self.animator!.addBehavior(self.gravity)
+      self.animator!.addBehavior(self.collision)
     }
   }
 }

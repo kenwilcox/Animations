@@ -16,6 +16,7 @@ class FlingViewController: UIViewController {
   var collision: UICollisionBehavior?
   
   var panGesture: UIPanGestureRecognizer?
+  var attach: UIAttachmentBehavior?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -53,13 +54,18 @@ class FlingViewController: UIViewController {
     if pan.state == .Began {
       
       self.animator!.removeAllBehaviors()
-      self.greenBox!.center = location
+      
+      var offset = UIOffsetMake(touchLocation.x - CGRectGetMidX(self.greenBox!.bounds), touchLocation.y - CGRectGetMidY(self.greenBox!.bounds))
+      self.attach = UIAttachmentBehavior(item: self.greenBox!, offsetFromCenter: offset, attachedToAnchor: location)
+      self.animator!.addBehavior(self.attach)
       
     } else if pan.state == .Changed {
       
-      self.greenBox!.center = location
+      self.attach!.anchorPoint = location
       
     } else if pan.state == .Ended {
+      
+      self.animator!.removeBehavior(self.attach)
       
       self.animator!.addBehavior(self.gravity)
       self.animator!.addBehavior(self.collision)

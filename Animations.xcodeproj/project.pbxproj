@@ -14,6 +14,7 @@
 		BE6036EE1A478BB600E71619 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6036EC1A478BB600E71619 /* LaunchScreen.xib */; };
 		BE6036FA1A478BB700E71619 /* AnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6036F91A478BB700E71619 /* AnimationsTests.swift */; };
 		BE6037051A478D2B00E71619 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE6037031A478D2B00E71619 /* LICENSE */; };
+		BE6EEAEB1A4FCA240000B730 /* FlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6EEAEA1A4FCA240000B730 /* FlingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		BE6036F91A478BB700E71619 /* AnimationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTests.swift; sourceTree = "<group>"; };
 		BE6037031A478D2B00E71619 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BE6037041A478D2B00E71619 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BE6EEAEA1A4FCA240000B730 /* FlingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				BE6036E31A478BB600E71619 /* AppDelegate.swift */,
 				BE6036E51A478BB600E71619 /* ViewController.swift */,
+				BE6EEAEA1A4FCA240000B730 /* FlingViewController.swift */,
 				BE6036E71A478BB600E71619 /* Main.storyboard */,
 				BE6036EA1A478BB600E71619 /* Images.xcassets */,
 				BE6036EC1A478BB600E71619 /* LaunchScreen.xib */,
@@ -220,6 +223,7 @@
 			files = (
 				BE6036E61A478BB600E71619 /* ViewController.swift in Sources */,
 				BE6036E41A478BB600E71619 /* AppDelegate.swift in Sources */,
+				BE6EEAEB1A4FCA240000B730 /* FlingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@ class FlingViewController: UIViewController {
   var greenBox: UIView?
   var animator: UIDynamicAnimator?
   var gravity: UIGravityBehavior?
+  var collision: UICollisionBehavior?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,8 +26,13 @@ class FlingViewController: UIViewController {
     self.animator = UIDynamicAnimator(referenceView: self.view)
     self.gravity = UIGravityBehavior(items:[self.greenBox!])
     
+    // add collision behavior
+    self.collision = UICollisionBehavior(items:[self.greenBox!])
+    self.collision!.translatesReferenceBoundsIntoBoundary = true
+    
     // Add gravity to the animator
-    self.animator!.addBehavior((self.gravity))
+    self.animator!.addBehavior(self.gravity)
+    self.animator!.addBehavior(self.collision)
   }
   
   override func didReceiveMemoryWarning() {

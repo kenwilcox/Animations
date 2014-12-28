@@ -67,6 +67,13 @@ class FlingViewController: UIViewController {
       
       self.animator!.removeBehavior(self.attach)
       
+      // Add some behavior to the box
+      var itemBehavior = UIDynamicItemBehavior(items:[self.greenBox!])
+      itemBehavior.addLinearVelocity(pan.velocityInView(self.view), forItem: self.greenBox!)
+      itemBehavior.angularResistance = 0.3
+      itemBehavior.elasticity = 0.6
+      self.animator!.addBehavior(itemBehavior)
+      
       self.animator!.addBehavior(self.gravity)
       self.animator!.addBehavior(self.collision)
       

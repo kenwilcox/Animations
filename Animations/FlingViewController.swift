@@ -11,6 +11,8 @@ import UIKit
 class FlingViewController: UIViewController {
   
   var greenBox: UIView?
+  var animator: UIDynamicAnimator?
+  var gravity: UIGravityBehavior?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,6 +21,9 @@ class FlingViewController: UIViewController {
     self.greenBox!.backgroundColor = UIColor.greenColor()
     self.greenBox!.frame = CGRectMake(CGRectGetMidX(self.view.frame) - 50, CGRectGetMidY(self.view.frame) - 50, 100, 100)
     self.view.addSubview(self.greenBox!)
+    
+    self.animator = UIDynamicAnimator(referenceView: self.view)
+    self.gravity = UIGravityBehavior(items:[self.greenBox!])
   }
   
   override func didReceiveMemoryWarning() {

@@ -24,6 +24,9 @@ class FlingViewController: UIViewController {
     
     self.animator = UIDynamicAnimator(referenceView: self.view)
     self.gravity = UIGravityBehavior(items:[self.greenBox!])
+    
+    // Add gravity to the animator
+    self.animator!.addBehavior((self.gravity))
   }
   
   override func didReceiveMemoryWarning() {

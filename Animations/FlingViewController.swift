@@ -15,6 +15,8 @@ class FlingViewController: UIViewController {
   var gravity: UIGravityBehavior?
   var collision: UICollisionBehavior?
   
+  var panGesture: UIPanGestureRecognizer?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -33,6 +35,10 @@ class FlingViewController: UIViewController {
     // Add gravity to the animator
     self.animator!.addBehavior(self.gravity)
     self.animator!.addBehavior(self.collision)
+    
+    // add pan getsture recognizer
+    self.panGesture = UIPanGestureRecognizer(target: self, action: "panning:")
+    self.greenBox!.addGestureRecognizer(panGesture!)
   }
   
   override func didReceiveMemoryWarning() {
@@ -40,4 +46,7 @@ class FlingViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  func panning(pan: UIPanGestureRecognizer) {
+    
+  }
 }

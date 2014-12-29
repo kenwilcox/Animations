@@ -23,7 +23,7 @@ class FlingViewController: UIViewController {
     
     self.greenBox = UIView()
     self.greenBox!.backgroundColor = UIColor.greenColor()
-    self.greenBox!.frame = CGRectMake(CGRectGetMidX(self.view.frame) - 50, CGRectGetMidY(self.view.frame) - 50, 100, 100)
+    self.greenBox!.frame = CGRectMake(CGRectGetMidX(self.view.frame) - 50, CGRectGetMidY(self.view.frame) - 50, 50, 50)
     self.view.addSubview(self.greenBox!)
     
     self.animator = UIDynamicAnimator(referenceView: self.view)

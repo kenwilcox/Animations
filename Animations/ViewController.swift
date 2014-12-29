@@ -26,8 +26,9 @@ class ViewController: UIViewController {
     let number = Int(self.numberSlider.value)
     for loopNumber in 1...number {
       let coloredSquare = UIView()
-      let size : CGFloat = CGFloat( Int(rand()) %  40 + 20)
-      let yPosition : CGFloat = CGFloat( Int(rand()) %  Int(self.view.frame.height * 0.5) + 20)
+      let size: CGFloat = CGFloat( Int(rand()) %  40 + 20)
+      let yPosition: CGFloat = CGFloat( Int(rand()) % Int(self.view.frame.height * 0.5) + 20)
+      let xPosition: CGFloat = CGFloat( Int(rand()) % Int(self.view.frame.width))
       
       coloredSquare.backgroundColor = UIColor.blueColor()
       coloredSquare.layer.zPosition = -99;
@@ -49,13 +50,13 @@ class ViewController: UIViewController {
               
               UIView.animateWithDuration(2.0, delay: delay * 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .CurveEaseInOut, animations: {
                 coloredSquare.backgroundColor = UIColor.greenColor()
-                coloredSquare.frame = CGRect(x: 0, y: self.view.frame.height - (size * 2), width: size * 2, height: size * 2)
+                coloredSquare.frame = CGRect(x: xPosition, y: self.view.frame.height - (size * 2), width: size * 2, height: size * 2)
                 }, completion: { finished in
 
                   UIView.animateWithDuration(0.5, animations: {
                     // Go back to "home"
                     coloredSquare.backgroundColor = UIColor.blueColor()
-                    coloredSquare.frame = CGRect(x: 0, y: -size, width: size, height: size)
+                    coloredSquare.frame = CGRect(x: xPosition, y: -size, width: size, height: size)
                     }, completion: {finished in
                       coloredSquare.removeFromSuperview()
                   })

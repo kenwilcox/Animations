@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1811" y="247"/>
         </scene>
-        <!--View Controller-->
+        <!--Push View Controller-->
         <scene sceneID="3IV-B6-fRU">
             <objects>
-                <viewController id="TQP-Be-2Jf" sceneMemberID="viewController">
+                <viewController id="TQP-Be-2Jf" customClass="PushViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sYH-YB-eKR"/>
                         <viewControllerLayoutGuide type="bottom" id="YP3-LI-HE1"/>

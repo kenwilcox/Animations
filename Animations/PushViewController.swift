@@ -13,6 +13,7 @@ class PushViewController: UIViewController {
   var greenBox: UIView?
   var animator: UIDynamicAnimator?
   var collision: UICollisionBehavior?
+  var push: UIPushBehavior?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,6 +28,10 @@ class PushViewController: UIViewController {
     self.collision = UICollisionBehavior(items:[self.greenBox!])
     self.collision!.translatesReferenceBoundsIntoBoundary = true
     self.animator!.addBehavior(self.collision!)
+    
+    self.push = UIPushBehavior(items:[self.greenBox!], mode: .Instantaneous)
+    self.push!.setAngle(CGFloat(M_PI / -2), magnitude: 10.0)
+    self.animator!.addBehavior(self.push)
     
   }
   

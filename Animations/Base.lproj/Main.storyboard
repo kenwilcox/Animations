@@ -56,6 +56,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IbP-Pe-LGH">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Push" id="AF1-3h-iKE">
+                            <connections>
+                                <segue destination="TQP-Be-2Jf" kind="show" id="8za-QK-OxO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Fling" id="VrN-jp-puC">
                             <connections>
                                 <segue destination="YRV-Li-LGF" kind="show" id="3Lp-j0-VgH"/>
@@ -88,6 +94,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTs-bd-pam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1811" y="247"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3IV-B6-fRU">
+            <objects>
+                <viewController id="TQP-Be-2Jf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sYH-YB-eKR"/>
+                        <viewControllerLayoutGuide type="bottom" id="YP3-LI-HE1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0F2-Ad-TSG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOH-R9-Hpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="-438"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IW7-dY-rF3">

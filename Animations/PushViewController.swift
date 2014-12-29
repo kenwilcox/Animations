@@ -14,6 +14,7 @@ class PushViewController: UIViewController {
   var animator: UIDynamicAnimator?
   var collision: UICollisionBehavior?
   var push: UIPushBehavior?
+  var snap: UISnapBehavior?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,6 +38,11 @@ class PushViewController: UIViewController {
     var tap = UITapGestureRecognizer(target: self, action: "onTap:")
     self.greenBox!.addGestureRecognizer(tap)
     
+    // add snap gesture recognizer
+    self.snap = UISnapBehavior(item: self.greenBox!, snapToPoint: CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds)))
+    
+    var pan = UIPanGestureRecognizer(target: self, action: "onPan:")
+    self.greenBox!.addGestureRecognizer(pan)
   }
   
   override func didReceiveMemoryWarning() {
@@ -44,7 +50,30 @@ class PushViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  func onPan(pan: UIPanGestureRecognizer) {
+    var location = pan.locationInView(self.view);
+    self.animator!.removeAllBehaviors()
+    
+    if pan.state == .Began {
+      
+      self.greenBox!.center = pan.locationOfTouch(0, inView: self.view);
+    }
+    
+    if pan.state == .Changed {
+      self.greenBox!.center = pan.locationOfTouch(0, inView: self.view)
+    }
+    
+    if pan.state == .Ended {
+      self.animator!.addBehavior(self.snap);
+      
+    }
+  }
+  
   func onTap(tap: UITapGestureRecognizer) {
+    self.animator!.removeBehavior(self.snap)
+    self.animator!.addBehavior(self.push)
+    self.animator!.addBehavior(self.collision)
+    
     self.push!.active = false
     self.push!.setAngle(CGFloat(M_PI / -2), magnitude: 10.0)
     self.push!.active = true

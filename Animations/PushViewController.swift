@@ -33,11 +33,21 @@ class PushViewController: UIViewController {
     self.push!.setAngle(CGFloat(M_PI / -2), magnitude: 10.0)
     self.animator!.addBehavior(self.push)
     
+    // "push" on tap
+    var tap = UITapGestureRecognizer(target: self, action: "onTap:")
+    self.greenBox!.addGestureRecognizer(tap)
+    
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  func onTap(tap: UITapGestureRecognizer) {
+    self.push!.active = false
+    self.push!.setAngle(CGFloat(M_PI / -2), magnitude: 10.0)
+    self.push!.active = true
   }
   
 }

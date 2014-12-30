@@ -19,7 +19,7 @@ class PushViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.greenBox = UIView(frame: CGRectMake(CGRectGetMidX(self.view.bounds) - 50, 300, 100, 100))
+    self.greenBox = UIView(frame: CGRect(x: CGRectGetMidX(self.view.bounds) - 50, y: 300, width: 100, height: 100))
     self.greenBox!.backgroundColor = UIColor.greenColor()
     self.greenBox!.transform = CGAffineTransformMakeRotation(CGFloat(M_PI/8))
     self.view.addSubview(self.greenBox!)
@@ -39,7 +39,7 @@ class PushViewController: UIViewController {
     self.greenBox!.addGestureRecognizer(tap)
     
     // add snap gesture recognizer
-    self.snap = UISnapBehavior(item: self.greenBox!, snapToPoint: CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds)))
+    self.snap = UISnapBehavior(item: self.greenBox!, snapToPoint: CGPoint(x: CGRectGetMidX(self.view.bounds), y: CGRectGetMidY(self.view.bounds)))
     
     var pan = UIPanGestureRecognizer(target: self, action: "onPan:")
     self.greenBox!.addGestureRecognizer(pan)
